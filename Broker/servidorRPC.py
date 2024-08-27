@@ -54,7 +54,7 @@ def iniciarServidor(host, puerto):
     Entradas:  
         host: IP del host
         puerto: Puerto de comunicaciones
-    '''
+    g'''
 
     server = SimpleXMLRPCServer((host, puerto))
     print(f"Servidor XML-RPC escuchando en {host}:{puerto}")
