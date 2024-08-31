@@ -6,10 +6,10 @@
 
 <!-- Table to show all the available post -->
 <div class="container my-5">
-    <h4 >POST FOUND</h4>
+    <h4 >TAREA ENCONTRADA</h4>
     {% if not posts %}
     <div class="alert alert-secondary" role="alert">
-        No existing items.
+        No se encontraron resultados
     </div>
 
     {% else %}
@@ -18,11 +18,11 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">S.No.</th>
-                <th scope="col">Title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Datetime </th>
-                <th scope="col">Actions</th>
+                <th scope="col">ID</th>
+                <th scope="col">Título</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Fecha de creación </th>
+                <th scope="col">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -34,9 +34,9 @@
                 <td>{{post['fechaCreacion']}}</td>
                 <td>
                     <a href="/update/{{post['_id']}}" type="button"
-                        class="btn btn-outline-dark btn-sm mx-1 my-1">UPDATE</a>
+                        class="btn btn-outline-dark btn-sm mx-1 my-1">ACTUALIZAR</a>
                     <a href="/delete/{{post['_id']}}" type="button"
-                        class="btn btn-outline-dark btn-sm mx-1 my-1">DELETE</a>
+                        class="btn btn-outline-dark btn-sm mx-1 my-1">ELIMINAR</a>
                 </td>
             </tr>
             {% endfor %}

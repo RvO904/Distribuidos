@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="container my-3">
-    <h4 >UPDATE TASK</h4>
+    <h4 >ACTUALIZAR TAREA</h4>
     <form action="/update/{{todo['_id']}}" method="POST">
         <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
+            <label for="title" class="form-label">Título</label>
             <input type="text" name='title' class="form-control" value="{{todo['titulo']}}" id="title"
                 aria-describedby="emailHelp" required>
 
         </div>
         <div class="mb-3">
-            <label for="desc" class="form-label">Description</label>
+            <label for="desc" class="form-label">Descripción</label>
             <input type="text" name="desc" value="{{todo['descripcion']}}" class="form-control" id="desc" required>
         </div>
 
-        <button type="submit" class="btn btn-dark">CHANGE</button>
+        <button type="submit" class="btn btn-dark">CAMBIAR</button>
     </form>
 </div>
 

@@ -74,7 +74,8 @@ def search_item():
 
 
 if __name__ == "__main__":
-    client = MongoClient(f'mongodb+srv://rvelez:{os.getenv('DATABASE_PASSWORD')}@universidad.wm6tn.mongodb.net/?retryWrites=true&w=majority&appName=Universidad')
+    load_dotenv()
+    client = MongoClient(f'mongodb+srv://{os.getenv('DATABASE_USERNAME')}:{os.getenv('DATABASE_PASSWORD')}@universidad.wm6tn.mongodb.net/?retryWrites=true&w=majority&appName=Universidad')
     db = client['Distribuidos']
     collection = db['tasks']
     app.run(debug=True, port=8000)
