@@ -1,1 +1,5 @@
 .env
+
+mongo_data/rs1
+mongo_data/rs2
+mongo_data/rs3
